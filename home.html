@@ -9,6 +9,10 @@
     <title>Home</title>
 </head>
 <body>
-    <form>Input <textarea name="" id="" cols="30" rows="1"></textarea> <button>submit</button></form> 
+    <form action="/processComplaint" method="POST">
+        <label for="textBox">Complaint: </label><br>
+            <textarea name="textBox" id="textBox" cols="30" rows="10"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
