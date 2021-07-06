@@ -12,11 +12,15 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+let posts = ['Welcome to Shitter'];
+
 app.get('/', function(request, response){
     response.sendFile(path.resolve('./home.html'))
 });
     app.post('/processComplaint', function(request, response){
         console.log(request.body.textBox);
+        posts.push(request.body.textBox);
+        console.log(posts);
         response.writeHead(301, { "Location": "http://" + URL + '/' });
         return response.end();
     });
